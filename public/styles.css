@@ -17,7 +17,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 500px;
-  max-width: 500px;
+  max-width: 600px; /* Increased for larger screens */
   min-width: 250px;
   background: #f1f5f8;
   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
@@ -53,7 +53,7 @@ body {
   font-family: "Architects Daughter", cursive;
   font-size: 1rem;
   color: hsla(260, 2%, 25%, 0.7);
-  width: 70%;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -78,15 +78,39 @@ li {
   text-align: left;
   position: relative;
   padding: 0.5rem;
+  font-size: 1rem;
 }
 
 /* Media queries for responsiveness */
 
+/* For screens above 1200px (larger screens) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%; /* Wider for larger screens */
+    padding: 2rem;
+  }
+
+  .form input {
+    width: 60%;
+    font-size: 1.1rem;
+  }
+
+  button span {
+    font-size: 1.1rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+}
+
 /* For screens up to 768px (tablets) */
 @media (max-width: 768px) {
   .container {
-    max-width: 90%;
+    max-width: 100%;
     min-height: 400px;
+    padding: 1.5rem;
   }
 
   .heading h1 {
@@ -95,13 +119,18 @@ li {
   }
 
   .form input {
-    width: 80%;
+    width: 90%;
     font-size: 0.9rem;
   }
 
   button span {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+  }
+
+  li {
+    font-size: 1rem;
+    padding: 0.4rem;
   }
 }
 
@@ -113,8 +142,8 @@ li {
   }
 
   .container {
-    max-width: 95%;
-    padding: 0.8rem;
+    max-width: 100%;
+    padding: 1rem;
   }
 
   .heading h1 {
@@ -123,16 +152,21 @@ li {
   }
 
   .form input {
-    width: 100%;
-    padding: 0.5rem;
+    width: 80%;
+    padding: 0.7rem;
+    float: left;
+    display: flex;
   }
 
   button span {
-    font-size: 0.8rem;
+    display: flex;
+    float: right;
+    font-size: 0.85rem;
+    width: 50%;
   }
 
   li {
-    padding: 0.3rem;
-    font-size: 0.9rem;
+    padding: 0.4rem;
+    font-size: 1rem;
   }
 }
